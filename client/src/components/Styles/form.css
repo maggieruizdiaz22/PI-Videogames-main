@@ -1,0 +1,79 @@
+.form h1 {
+    color: rgb(246, 246, 246);
+    font-size: 40px;
+    text-transform: capitalize;
+    margin-top: auto;
+    margin-bottom: 20px;
+  }
+  .form label {
+    color: #d6d6d6;
+    font-size: 30px;
+    text-transform: capitalize;
+    margin-bottom: 25px;
+    letter-spacing: 2px;
+    
+  }
+  
+  .form input {
+    width: 250px;
+    height: 35px;
+    border: grey;
+    outline: auto;
+    padding: 10px;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+  }
+  
+  .form select {
+    border: none;
+    outline: none;
+    margin-left: 10px;
+    margin-top: 7px;
+    margin-bottom: 7px;
+    padding: 0 25px;
+    border-radius: 10px;
+    height: 35px;
+    width: 150px;
+  }
+  
+  .form button {
+    margin: 20px;
+  }
+  
+  .form textarea {
+    border: none;
+    outline: none;
+    border-radius: 1rem;
+    margin: 10px;
+    padding: 20px;
+  }
+  
+  .form option {
+    border: none;
+    outline: none;
+  }
+  
+  .selected {
+    margin: 15px;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .selected p {
+    margin: auto;
+    color: rgb(241, 241, 241);
+    font-size: 17px;
+    text-transform: capitalize;
+    margin-bottom: 25px;
+    letter-spacing: 2px;
+  }
+  .error{
+    margin: auto;
+    color: #f9004d;
+    font-size: 15px;
+    text-transform: capitalize;
+    margin-bottom: 25px;
+    letter-spacing: 2px;
+    font-weight: 900;
+  }

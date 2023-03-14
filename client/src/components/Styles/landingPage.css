@@ -1,0 +1,17 @@
+.landing {
+    margin: 230px;
+  }
+  .landing button {
+    width: 200px;
+    height: 100px;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 50px;
+    text-transform: capitalize;
+  }
+  .landing button:hover {
+    box-shadow: 2px 2px 26px 0px rgba(253, 220, 220, 0.952);
+  }
+
+
+
