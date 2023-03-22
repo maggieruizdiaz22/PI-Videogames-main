@@ -13,8 +13,6 @@ export default function Card({img,name,genres,rating}){
         genres.map(g => genres2.push(g.name) )
       }
     }
-    
-    
     return (
         <div>
           

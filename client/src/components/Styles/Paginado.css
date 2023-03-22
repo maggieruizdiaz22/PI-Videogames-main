@@ -17,10 +17,10 @@
        
     }
  .page-numberactive {
-    background: #757879;
+    background: #3d4447;
     color: rgb(240, 240, 240);
     text-decoration: none;
-    border: 2px solid transparent;
+    border: 5px solid transparent;
     font-weight: bold;
     padding: 13px 30px;
     border-radius: 30px;

@@ -1,4 +1,192 @@
 * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.background {
+  min-height: 100vh;
+  background: url(../img/background.jpg) no-repeat center center fixed;
+  background-size: cover;
+  padding: 20px;
+}
+.grid {
+  margin: 50px;
+  display: grid;
+
+  grid-gap: 30px;
+  align-items: center;
+}
+.glass {
+  width: 95%;
+  height: 95%;
+  background: linear-gradient(
+    135deg,
+    rgba(105, 94, 94, 0.1),
+    rgba(255, 255, 255, 0)
+  );
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border: 1px solid rgba(85, 75, 75, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  margin: auto;
+  padding: 15px;
+}
+.card {
+  margin: auto;
+  background: rgb(190, 168, 168);
+  border: none;
+  /* box-shadow: 2px 2px 2px 2px rgb(222, 189, 189); */
+  border-radius: 20px;
+  text-align: center;
+  width: 250px;
+  height: 350px;
+  transition: transform 0.3s;
+}
+.card:hover {
+  transform: translateY(5px);
+  box-shadow: 2px 2px 26px 0px rgba(253, 220, 220, 0.952);
+}
+
+.card img {
+  width: 100%;
+  height: 160px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.card h3 {
+  color: rgba(15, 15, 15, 0.884);
+  letter-spacing: 1px;
+  line-height: 28px;
+  font-size: 20px;
+  margin-top: 5px;
+  margin-bottom: 40px;
+}
+
+.card h4 {
+  color: rgba(37, 37, 37, 0.884);
+  letter-spacing: 1px;
+  line-height: 28px;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.card h5 {
+  color: rgba(12, 12, 12, 0.884);
+  letter-spacing: 1px;
+  line-height: 28px;
+  font-size: 18px;
+  margin-bottom: 45px;
+}
+
+.text {
+  padding: 0 20px 20px;
+  text-decoration: none;
+  color: rgb(12, 11, 11);
+}
+
+.text h3 {
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+a:link,
+  a:visited,
+  a:active {
+    text-decoration: none;
+    color: black;
+  }
+  button {
+    border: 1px solid ;
+    border-radius: 10px;
+    background-color: transparent; /* Green */
+    color: rgb(168, 102, 102);
+    padding: 10px 7px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 10px;
+    
+  }
+  button:hover {
+    background: transparent;
+    border: 1px solid ;
+    cursor: pointer;
+    
+  }  
+  .search input {
+    width: 150px;
+    height: 20px;
+    border: none;
+    outline: none;
+    padding: 0 12px;
+    border-radius: 5px 0 0 5px;
+  }
+  .filters select {
+  
+    padding: 0 25px;
+    border-radius: 10px;
+    height: 25px;
+    width: 150px;
+  }
+  .pages {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+ }
+ .page{
+    display: inline-block;
+	padding-left: .5rem;
+	padding-right: .5rem;
+	margin-bottom: 3rem;
+ }
+    .prev-next {
+        padding-left: 1rem;
+        padding-right: 1rem;
+        margin-top: 30px;
+       
+    }
+ .page-numberactive {
+   
+    color: rgb(240, 240, 240);
+    text-decoration: none;
+    border: 5px solid transparent;
+    font-weight: bold;
+    padding: 13px 30px;
+    border-radius: 30px;
+    transition: 0.4s;
+    
+}
+ 
+.paginate-container {
+	display: flex;
+	justify-content: center;
+}
+ .page ul {
+     list-style: none;
+     text-align: center; 
+ }
+ .page ul li{
+     display: inline-block;
+     margin-right: 10px;
+     cursor: pointer;
+ }
+ .page ul li :hover{
+     transform: translateY(3.5px);
+     box-shadow: 2px 2px 26px 0px rgba(253, 220, 220, 0.952);
+ }
+ 
+ .page ul li a {
+     display: block;
+     padding: 10px 20px;
+     color: rgb(164, 156, 156);
+     background: #c5c1be;
+     border-radius: 0.7rem;
+     text-decoration: none;
+   
+ }
+@media (min-width:768px){
+  * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -10,6 +198,17 @@
     padding: 20px;
     
   }
+  .card {
+    margin: auto;
+    background: rgb(190, 168, 168);
+    border: none;
+    /* box-shadow: 2px 2px 2px 2px rgb(222, 189, 189); */
+    border-radius: 20px;
+    text-align: center;
+    width: 250px;
+    height: 350px;
+    transition: transform 0.3s;
+  }
   
   /*-------------------HOME---------------------*/
   .grid {
@@ -18,6 +217,7 @@
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 30px;
     align-items: center;
+
   }
   .glass {
     width: 95%;
@@ -46,6 +246,7 @@
     width: 250px;
     height: 350px;
     transition: transform 0.3s;
+   
   }
   
   .card:hover {
@@ -58,6 +259,7 @@
     height: 160px;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
+  
   }
   
   .card h3 {
@@ -102,7 +304,6 @@
     text-decoration: none;
     color: black;
   }
-  
   
   /*-------------------FILTERS---------------------*/
   .filters {
@@ -151,4 +352,21 @@
     margin-left: 350px;
     padding: 10px;
   }
+  button {
+    border: 1px solid transparent;
+    border-radius: 25px;
+    background-color: #f9004d; /* Green */
+    color: white;
+    padding: 13px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
+  button:hover {
+    background: transparent;
+    border: 2px solid ;
+  }  
   
+
+}

@@ -77,19 +77,19 @@ function handleRating(e){
 return(
 <div className="background">
 <div className="filters">
-  <div>
+  <div className="createvideogame">
     <Link to={"/form"}>
-      <button>Create Videogame</button>
+      <button className="button">Create Videogame</button>
     </Link>
   </div>
-  <div className="filtro">
-    <select onChange={(e) => handlesort(e)}>
-      <option>Alphabetical</option>
+  <div className="filters">
+    <select  onChange={(e) => handlesort(e)}>
+      <option >Alphabetical</option>
       <option value="a-z">A-Z</option>
       <option value="z-a">Z-A</option>
     </select>
   </div>
-  <div className="filtro">
+  <div className="">
     <select onChange={(e) => handleRating(e)}>
       <option>Rating</option>
       <option value="Worst-best">Worst-best</option>
@@ -111,14 +111,14 @@ return(
       <option value="api">Api</option>
     </select>
   </div>
-  <div>
-    <button onClick={(e) => handleClick(e)}>Reload</button>
+  <div className="reload">
+    <button className="button" onClick={(e) => handleClick(e)}>Reload</button>
   </div>
 </div>
 <div className="search">
   <SearchBar setCurrentPage={setCurrentPage} setOrder={setOrder}/> 
 </div>
-<div>
+<div className="pages">
 <Paginado
     videogamesPerPage={videogamesPerPage}
     allVideogames={allVideogames.length}

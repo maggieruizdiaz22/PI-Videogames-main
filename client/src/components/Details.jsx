@@ -45,78 +45,79 @@ const ID = id.includes("-")
     }
     
 
-
-
-
-
-return(
-    <>
-    <div className=".about" >
-        <div className="background">
-        <div className="glass">
-        <button onClick={(e) => handleDelete(e)} className="button1X " >X</button>  
-        {    
-        myVideogame.length > 0 ?
-        <div>
-            <div className="main">
-            
-            <h1 className="h1Max">{myVideogame[0].name}</h1>
-            <img className="card1"src={myVideogame[0].img} alt="" width="250px" height="300"/>
-            <div className="about-text" >
-               
+    return (
+        <>
+           <div className="about1" >
+            <div className="background">
+              <div className="lola">
+              <div className="glass1">
+                <button onClick={(e) => handleDelete(e)} className="button1">X</button>
+                {
+                  myVideogame.length > 0 ?
+                    <div>
+                      <div className="main">
+                        <img className="card1" src={myVideogame[0].img} alt="" width="250px" height="300" />
+                        <h1 className="h1Max">{myVideogame[0].name}</h1>
+                        <div className="description">
+                          <p className="description">Description: </p>
+                        </div>
+                        <div className="copete">
+                          <p className="descriptionP scroll">
+                            {readMore ? myVideogame[0].description : `${myVideogame[0].description.substring(0, 200)}...`}
+                            <button className="button2" onClick={() => setReadmore(!readMore)}>{readMore ? 'SHOW LESS' : 'SHOW MORE'} </button>
+                          </p>
+                        </div>
+    
+                        <div className="description">
+    
+                          <span className="span1">Rating: </span>
+                          </div>
+                          <div className="copete">
+                          <span className="span2">{myVideogame[0].rating}</span>
+    </div>
+                        
+                        <div className="description">
+    
+                          <span>Released: </span>
+                        </div>
+                        <div className="copete">
+                          <span className="span2">{myVideogame[0].released}</span>
+                        </div>
+    
+                        <div className="description">
+    
+                          <span>Platforms: </span>
+                        </div>
+                        <div>
+                          <span className="copete">{myVideogame[0].platforms}</span>
+                        </div>
+                        <div className="description">
+    
+                          <span>Genres:</span>
+                        </div>
+                        <div>
+                          <span className="copete">{myVideogame[0].genres}</span>
+                        </div>
+    
+                        <Link to='/home'>
+                          <button className="button2">BACK</button>
+                        </Link>
+                      </div>
+                    </div>
+                    :
+                    <Loading />
+                }
+              </div>
+              </div>
             </div>
-            <div className="description">
-               
-            <p>Description: </p>
-            
-            
-            <p className="descriptionP">
-                {readMore ? myVideogame[0].description : `${myVideogame[0].description.substring(0,200)}...`}
-                <button className="button1" onClick={()=>setReadmore(!readMore)}>{readMore ? 'show less' : 'show more'} </button>
-            </p>
-            </div>
-            <div className="rating">
-                <h5>
-            <span className="span1">Rating: </span>
-            <span className="span2">{myVideogame[0].rating}</span>
-                </h5>
-                </div>
-                <div className="span1">
-                    <h5>
-            <span>Released: </span>
-            <span className="span2">{myVideogame[0].released}</span>
-             </h5>
-             </div>
-             <div className="span1"> 
-             <h5>
-             <span>Platforms: </span>
-             <span className="span2">{myVideogame[0].platforms}</span>
-             </h5>
-             </div>
-             <div className="span1"> 
-             <h5>
-             <span>Genres:</span>
-             <span className="span2">{myVideogame[0].genres}</span>
-             </h5>
-             </div>
-             
-
-<Link to= '/home'>
-    <button className="button1">Back</button>
-</Link>
-</div>
+          </div>
+        </>
+      )
+    }
+    
+    
+    
+    
+    
+    
         
-</div> :  <Loading />
-}
-    </div>
-    </div>
-    </div>
-    </>
-)
-}
-
-
-        
-            
-            
-           
