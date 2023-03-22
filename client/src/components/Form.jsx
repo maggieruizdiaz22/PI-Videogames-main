@@ -2,7 +2,7 @@ import React,{ useState, useEffect} from "react";
 import {Link, useHistory} from "react-router-dom";
 import { useDispatch,useSelector } from "react-redux";
 import { postVideogames, getGenres,getPlatforms } from "../actions";
-import { platf , validate} from "./info";
+import { platf } from "./info";
 import "../components/Styles/form.css"
 
 
@@ -13,12 +13,6 @@ export default function Form(){
     const allGenres = useSelector((state)=>state.genres);
     const genresNames = allGenres.map(e=>e.name)
 
-
-
-
-
-
-    const [error,setError] = useState({}) //  un estado local que va a empezar como un objeto vacio
     const [input,setInput] = useState({ // input es el estado local
         name : '',
         img : '',
@@ -29,10 +23,6 @@ export default function Form(){
         platforms : [],
 
     });
-
-
-
-
 
    function handleChange(e){ // cada vex q ese ejecuta esta fucion ademas de lo que tiene agrega al target value de lo q este modificando
     setInput({  // a medida que se va modificando se va llenando el campo de arriba con la info ingresada
@@ -145,12 +135,8 @@ setInput({
                     title="insert letters"
                     pattern="/^[\pL\s]*$/u"
                     required
-
                     onChange={(e)=>handleChange(e)}
                     />
-                  
-          
-          
                 </div>
                 <div>
                     <label>Released:</label>
@@ -160,7 +146,7 @@ setInput({
                     value={input.released}
                     name= "released"
                     title="invalid field"
-                    pattern="^(?:3[01]|[12][0-9]|0?[1-9])([\-/.])(0?[1-9]|1[1-2])\1\d{4}$"
+                    pattern="^(?:3[01]|[12][0-9]|0?[1-9])([\-/.])(0?[1-9]|1[1-2])\d{4}$"
                     required
                     onChange={(e)=>handleChange(e)}
                     />

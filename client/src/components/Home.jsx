@@ -8,7 +8,7 @@ import Paginado from "./Paginado";
 import SearchBar from "./SearchBar";
 import "../components/Styles/home.css"
 import Loading from "./Loading"
-import { useHistory } from "react-router-dom";
+
 
 
 export default function Home({id}){
@@ -27,8 +27,8 @@ export default function Home({id}){
 //paginado
   
     const [currenPage, setCurrentPage] = useState(1) // mi pagina actual arranca en 1
-    const [videogamesPerPage, setVideogamesPerPage] = useState(15) // cantidad de videogames per pagina
-    const [order,setOrder] = useState("")
+    const [videogamesPerPage] = useState(15) // cantidad de videogames per pagina
+    const [setOrder] = useState("")
     const indexOfLastVideogame = currenPage*videogamesPerPage // 15
     const indexOfFirstVideogame = indexOfLastVideogame - videogamesPerPage // 15-15 = 0
     const currentVideogames = allVideogames.slice(indexOfFirstVideogame,indexOfLastVideogame)// en diferentes nros de pagina va cambiando las posiciones

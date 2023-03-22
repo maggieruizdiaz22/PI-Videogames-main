@@ -19,7 +19,7 @@ export const CLEANER_NAME = "CLEANER_NAME"
 //conexion con el font y el back solo se despacha un tipo en action no debo hacer logica, hare la logica en reducer o componente
 export function getVideogames(){
 return async function(dispatch){
-let response = await axios.get(`http://localhost:3001/videogames`, {});
+let response = await axios.get(`/videogames`, {});
 return dispatch({ // dispacho la accion 
 type: GET_VIDEOGAMES,
 payload: response.data // aca enviaremos esta info de la base de datos la guardaremos en payload para poder pasarla al reducer 
@@ -62,7 +62,7 @@ return dispatch({
     export function getGameByName(name){
         return async function(dispatch){
             try {
-                let response1= await axios.get(`http://localhost:3001/videogames?name=${name}`) // accede a esta direccion pero con el name obligado
+                let response1= await axios.get(`/videogames?name=${name}`) // accede a esta direccion pero con el name obligado
                 let response2= await response1.data
                 return dispatch({
                     type: GET_BY_NAME,
@@ -112,7 +112,7 @@ export function orderByRating(payload){
 }
 export function postVideogames(payload){
     return async function(dispatch){
-        const response = await axios.post(`http://localhost:3001/videogames`,
+        const response = await axios.post(`/videogames`,
         payload);
         console.log(response);
         return dispatch({
@@ -124,7 +124,7 @@ export function postVideogames(payload){
 export function getDetail(id){
     return async function(dispatch){
         try {
-            const response3 = await axios.get("http://localhost:3001/videogames/" + id );
+            const response3 = await axios.get("/videogames/" + id );
             return dispatch({
                 type: GET_DETAIL,
                 payload: response3.data
@@ -152,7 +152,7 @@ export function clearVideogames(payload){
 export function deleteVideogames(id){
         return async function(dispatch){
             try {
-                await axios.delete("http://localhost:3001/videogames/" + id )
+                await axios.delete("/videogames/" + id )
                 return dispatch({
                     type: DELETE_VIDEOGAME,
                     payload:id,
