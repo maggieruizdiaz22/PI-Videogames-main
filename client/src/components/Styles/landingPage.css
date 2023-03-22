@@ -1,4 +1,22 @@
 .landing {
+  margin-left: 0px;
+  text-align: center;
+ margin-top: 170px;
+}
+.landing button {
+  width: 90px;
+  height: 40px;
+  border-radius: 25px;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+  color: white
+}
+.landing button:hover {
+  box-shadow: 2px 2px 26px 0px rgba(253, 220, 220, 0.952);
+}
+@media (min-width:768px) {
+  .landing {
     margin: 230px;
   }
   .landing button {
@@ -13,5 +31,5 @@
     box-shadow: 2px 2px 26px 0px rgba(253, 220, 220, 0.952);
   }
 
-
+}
 
