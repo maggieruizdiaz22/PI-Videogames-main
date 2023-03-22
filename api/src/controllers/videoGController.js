@@ -1,7 +1,6 @@
 require('dotenv').config()
 const   axios  = require("axios");
 const { Videogame, Genre } = require("../db");
-
 const { YOUR_API_KEY } = process.env;
 const{ cleanArray2,cleanArray,genreMap } = require("./Tools")
 
