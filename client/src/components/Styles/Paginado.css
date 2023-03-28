@@ -24,6 +24,7 @@
     font-weight: bold;
     border-radius: 30px;
     transition: 0.4s;   
+    padding: 10px 8px
 }
  
 .paginate-container {
