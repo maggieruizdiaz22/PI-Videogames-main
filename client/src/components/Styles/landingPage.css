@@ -10,8 +10,10 @@
   font-weight: bold;
   font-size: 20px;
   text-align: center;
-  color: white
+  color: white;
+  padding-bottom: 35px;
 }
+
 .landing button:hover {
   box-shadow: 2px 2px 26px 0px rgba(253, 220, 220, 0.952);
 }
