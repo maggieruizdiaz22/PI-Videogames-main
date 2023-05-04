@@ -17,14 +17,14 @@
        
     }
  .page-numberactive {
-    background: #3d4447;
+    background: transparent;
     color: rgb(240, 240, 240);
     text-decoration: none;
-    border: 5px solid transparent;
+    border: 1px solid  rgb(201, 201, 201);
     font-weight: bold;
+    padding: 10px 7px;
     border-radius: 30px;
-    transition: 0.4s;   
-    padding: 10px 8px
+    transition: 0.4s;
 }
  
 .paginate-container {
