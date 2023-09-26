@@ -5,7 +5,7 @@ import Home from './components/Home';
 import Form from './components/Form';
 import Details from './components/Details';
 import axios from 'axios';
-axios.defaults.baseURL='https://videogames-xxe7.onrender.com';
+axios.defaults.baseURL='https://videogames-pi-main.onrender.com/';
 
 function App() {
   return (
